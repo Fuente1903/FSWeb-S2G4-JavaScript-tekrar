@@ -19,6 +19,7 @@ function KareninAlani(kenaruzunlugu){
 
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
+console.log(KareninAlani(10));
 
 
 /* 	GÖREV 1:  
@@ -29,9 +30,9 @@ function KareninAlani(kenaruzunlugu){
 			4. Hesaplanan çemberin çevresi döndürülecektir.
 		*/
 
-function CemberinCevresi(/* kodlar buraya */){
-	/* kodlar buraya */
-}
+function CemberinCevresi(radius) {
+			return 2 * pi * radius;
+	 }
 
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -47,9 +48,9 @@ function CemberinCevresi(/* kodlar buraya */){
 			4. Hesaplanan çemberin alanı döndürülecektir.
 		*/
 		
-function CemberinAlani(/* kodlar buraya */){
-	/* kodlar buraya */
-}
+		function CemberinAlani(radius, pi) {
+			return pi * radius ** 2;
+		  }
 
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -75,38 +76,38 @@ function CemberinAlani(/* kodlar buraya */){
 
 	var ucetambolunenler, enkucuk, enbuyuk, ucebolunenlerintoplami, besyuzdenkucuksayilar, siralisayilar, tekraredensayilar;
 	
-	//3a çözümü
-
-	/* kodlar buraya */
-	
-	
+	enkucuk = Math.min(...sayilar);
+	enbuyuk = Math.max(...sayilar);
 	
 	// 3b çözümü:
 
-	/* kodlar buraya */
-		
-		
-		
-	//3c çözümü:
-	
-	/* kodlar buraya */
+	ucetambolunenler = sayilar.filter((num) => num % 3 === 0);
 
-	
+	//3c çözümü:
+
+	ucebolunenlerintoplami = ucetambolunenler.reduce((total, num) => total + num);
+
+			
 	
 	//3d çözümü
 	
-	/* kodlar buraya */
+	besyuzdenkucuksayilar = sayilar.filter((num) => num < 500);
+
 
 
 
 	//3e çözümü
 
-	/* kodlar buraya */
+	siralisayilar = besyuzdenkucuksayilar.sort((a, b) => a - b);
 	
 	
 	//3f çözümü
 	
-	/* kodlar buraya */
+	let refArr = [...new Set(sayilar)];
+	tekraredensayilar = refArr.map((num) => {
+  	let repeat = sayilar.filter((item) => item === num).length;
+  	return `${num} sayısı ${repeat} kere tekrar edildi`;
+	});
 
 
 
